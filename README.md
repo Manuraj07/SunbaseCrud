@@ -95,6 +95,7 @@ JSP Files
     search.jsp: Form for searching students.
     update.jsp: Form for updating existing students.
 AllComponent:
+
     allCss.jsp: Includes CSS stylesheets.
     navbar.jsp: Navigation bar.
 
