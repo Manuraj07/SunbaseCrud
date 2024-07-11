@@ -18,18 +18,6 @@ This is a Java web application for managing student records. It provides CRUD (C
 1. Install MySQL and create a database named `student_db`.
 2. Run the following SQL script to create the `students` table:
 
-```sql
-CREATE DATABASE studentdb;
-
-USE student_db;
-
-CREATE TABLE students (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    age INT NOT NULL
-);
-
 
 List of All the Students
 ![Screenshot 2024-07-11 145859](https://github.com/Manuraj07/SunbaseCrud/assets/87747649/e3976153-df5b-4d28-96c2-fb4e820ac445)
