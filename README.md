@@ -1,3 +1,195 @@
+# SunbaseCrud
+
+## Student Management Web Application
+
+This is a Java web application for managing student records. It provides CRUD (Create, Read, Update, Delete) functionality using JDBC, Servlets, and JSPs with MySQL as the database.
+
+## Features
+
+- **Add Student**: Add new student records.
+- **View Students**: View a list of all student records.
+- **Update Student**: Update existing student records.
+- **Delete Student**: Delete student records.
+- **Search Students**: Search for student records by keyword.
+
+## Getting Started
+
+### Setting Up the Database
+
+1. Install MySQL and create a database named `student_db`.
+2. Run the following SQL script to create the `students` table:
+    ```sql
+    CREATE DATABASE student_db;
+
+    USE student_db;
+
+    CREATE TABLE students (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        age INT NOT NULL
+    );
+    ```
+
+### Configuring the Project
+
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/Manuraj07/SunbaseCrud.git
+    cd SunbaseCrud
+    ```
+
+2. Open the project in your IDE (e.g., Eclipse, IntelliJ).
+
+3. Configure the database connection in `DBconnect.java`:
+    ```java
+    package com.DB;
+
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+
+    public class DBconnect {
+        private static Connection conn;
+
+        public static Connection getConnetion() {
+            try {
+                if (conn == null) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_db", "root", "root");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return conn;
+        }
+    }
+    ```
+    Replace `your-username` and `your-password` with your MySQL credentials.
+
+### Building and Deploying
+
+1. Build the project using Maven:
+    ```bash
+    mvn clean install
+    ```
+
+2. Deploy the generated WAR file to Apache Tomcat:
+   - Copy the WAR file from `target/SunbaseCrud.war` to the `webapps` directory of your Tomcat installation.
+
+3. Start the Tomcat server.
+
+### Accessing the Application
+
+Open your web browser and navigate to `http://localhost:8080/SunbaseCrud`.
+
+## Project Structure
+
+
+Here is a well-organized and polished version of your README.md file:
+
+markdown
+Copy code
+# SunbaseCrud
+
+## Student Management Web Application
+
+This is a Java web application for managing student records. It provides CRUD (Create, Read, Update, Delete) functionality using JDBC, Servlets, and JSPs with MySQL as the database.
+
+## Features
+
+- **Add Student**: Add new student records.
+- **View Students**: View a list of all student records.
+- **Update Student**: Update existing student records.
+- **Delete Student**: Delete student records.
+- **Search Students**: Search for student records by keyword.
+
+## Getting Started
+
+### Setting Up the Database
+
+1. Install MySQL and create a database named `student_db`.
+2. Run the following SQL script to create the `students` table:
+    ```sql
+    CREATE DATABASE student_db;
+
+    USE student_db;
+
+    CREATE TABLE students (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        age INT NOT NULL
+    );
+    ```
+
+### Configuring the Project
+
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/Manuraj07/SunbaseCrud.git
+    cd SunbaseCrud
+    ```
+
+2. Open the project in your IDE (e.g., Eclipse, IntelliJ).
+
+3. Configure the database connection in `DBconnect.java`:
+    ```java
+    package com.DB;
+
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+
+    public class DBconnect {
+        private static Connection conn;
+
+        public static Connection getConnetion() {
+            try {
+                if (conn == null) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_db", "your-username", "your-password");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return conn;
+        }
+    }
+    ```
+    Replace `your-username` and `your-password` with your MySQL credentials.
+
+### Building and Deploying
+
+1. Build the project using Maven:
+    ```bash
+    mvn clean install
+    ```
+
+2. Deploy the generated WAR file to Apache Tomcat:
+   - Copy the WAR file from `target/SunbaseCrud.war` to the `webapps` directory of your Tomcat installation.
+
+3. Start the Tomcat server.
+
+### Accessing the Application
+
+Open your web browser and navigate to `http://localhost:8080/SunbaseCrud`.
+
+## Project Structure
+
+src/main/java
+|-- com
+| |-- DB
+| | -- DBconnect.java | |-- DAO | | -- StudentsDAO.java
+| |-- entity
+| | -- Students.java | -- servlet
+| |-- AddServlet.java
+| |-- DeleteServlet.java
+| |-- EditServlet.java
+| |-- SearchServlet.java
+| -- UpdateServlet.java | src/main/webapp |-- AllComponent | |-- allCss.jsp | -- navbar.jsp
+|-- add.jsp
+|-- list.jsp
+|-- update.jsp
+|-- index.jsp
 
 ## Java Classes
 
