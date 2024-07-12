@@ -235,6 +235,11 @@ src/main/java
 ![Delete Student](![Screenshot 2024-07-11 150839](https://github.com/user-attachments/assets/05832b52-b45b-4ecb-870b-682ac8c1acf5))
 
 
+### Serch By name or Id 
+
+![Screenshot 2024-07-11 165935](https://github.com/user-attachments/assets/5a5f1202-5b67-4655-b2cc-29b054114e17)
+
+
 ### Database
 
 ![Database](https://github.com/Manuraj07/SunbaseCrud/assets/87747649/e6d77260-8c37-4624-aae4-ecf550ea9515)
