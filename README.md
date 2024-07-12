@@ -40,12 +40,11 @@
 
 ### Delete Student
 
-![Delete Student](https://github.com/Manuraj07/SunbaseCrud/assets/87747649/ae0185ee-a7ee-428b-bda9-ac6cf3b1f226)
+![Delete Student](![Screenshot 2024-07-11 150839](https://github.com/user-attachments/assets/05832b52-b45b-4ecb-870b-682ac8c1acf5))
+
 
 ### Database
 
 ![Database](https://github.com/Manuraj07/SunbaseCrud/assets/87747649/e6d77260-8c37-4624-aae4-ecf550ea9515)
 
-## License
 
-This project is licensed under the MIT License.
